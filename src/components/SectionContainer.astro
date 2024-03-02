@@ -1,0 +1,16 @@
+---
+import { cn } from "@/lib/utils";
+
+const { class: className, id } = Astro.props;
+---
+
+<section
+  id={id}
+  data-section={id}
+  class={cn(
+    `section scroll-m-20 w-full mx-auto container lg:max-w-4xl md:max-w-2xl`,
+    className,
+  )}
+>
+  <slot />
+</section>
