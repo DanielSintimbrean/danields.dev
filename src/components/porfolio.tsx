@@ -16,38 +16,6 @@ import { Textarea } from "@/components/ui/textarea";
 export function Porfolio() {
   return (
     <div className="flex min-h-[100dvh] flex-col">
-      <header className="flex flex-col gap-1 px-4 py-4 lg:px-6 lg:py-6">
-        <div className="container flex flex-col gap-2">
-          <div className="space-y-1">
-            <h1 className="text-2xl font-bold tracking-tighter sm:text-3xl">
-              Portfolio
-            </h1>
-            <p className="text-sm text-gray-500 dark:text-gray-400">
-              UX/UI Designer and Full Stack Developer
-            </p>
-          </div>
-          <nav className="ml-auto flex gap-4 sm:gap-6">
-            <a
-              className="text-sm font-medium underline-offset-4 hover:underline"
-              href="#"
-            >
-              Projects
-            </a>
-            <a
-              className="text-sm font-medium underline-offset-4 hover:underline"
-              href="#"
-            >
-              About
-            </a>
-            <a
-              className="text-sm font-medium underline-offset-4 hover:underline"
-              href="#"
-            >
-              Contact
-            </a>
-          </nav>
-        </div>
-      </header>
       <main className="flex-1">
         <section className="w-full py-12 md:py-24 lg:py-32">
           <div className="container grid items-center gap-6 px-4 text-center md:px-6 lg:grid-cols-2 lg:justify-center lg:gap-10">
