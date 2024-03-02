@@ -3,6 +3,8 @@ import Layout from "@/layouts/Layout.astro";
 
 import "../styles/globals.css";
 
+import { Image } from "astro:assets";
+
 import SectionContainer from "@/components/SectionContainer.astro";
 import {
   Card,
@@ -13,13 +15,13 @@ import {
 } from "@/components/ui/card";
 ---
 
-<Layout title="Welcome to Astro." description="">
+<Layout title="Daniel Sintimbrean | Fullstack Web" description="">
   <main>
     <SectionContainer>
       <div
-        class="container grid items-center gap-6 px-4 text-center md:px-6 lg:grid-cols-2 lg:justify-center lg:gap-10"
+        class="grid items-center gap-6 px-4 py-24 text-center md:px-6 lg:grid-cols-3 lg:justify-center lg:gap-10"
       >
-        <div class="space-y-2 lg:order-last">
+        <div class="col-span-2 space-y-6 lg:order-last">
           <div class="inline-block rounded-lg bg-background px-3 py-1 text-sm">
             Introducción
           </div>
@@ -29,20 +31,19 @@ import {
             Hola, soy Daniel Sintimbrean 👋
           </h1>
           <p
-            class="mx-auto max-w-[600px] text-balance md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed"
+            class="max-w-[600px] text-pretty md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed"
           >
             Ingeniero de software, especializado en el desarrollo fullstack de
             aplicaciones web.
           </p>
-          <p
-            class="mx-auto max-w-[600px] text-balance md:text-lg/relaxed lg:text-base/relaxed xl:text-lg/relaxed"
-          >
+          <p class="mx-auto max-w-[600px] md:text-sm lg:text-lg xl:text-sm">
             Originalmente un aprendiz de .NET; sin embargo, React y TypeScript
-            fueron los que realmente encendieron mi pasión por el desarrollo.
+            fueron los que realmente encendieron mi pasión por el desarrollo. <br
+            />
             ¡Bienvendio a mi portafolio!
           </p>
         </div>
-        <img
+        <Image
           alt="Hero"
           class="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center lg:aspect-video"
           height="310"
