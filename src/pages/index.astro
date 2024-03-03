@@ -3,8 +3,6 @@ import Layout from "@/layouts/Layout.astro";
 
 import "../styles/globals.css";
 
-import { Image } from "astro:assets";
-
 import SectionContainer from "@/components/SectionContainer.astro";
 import {
   Card,
@@ -13,189 +11,142 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import Experiencia from "./_components/Experiencia.astro";
+import Hero from "./_components/Hero.astro";
 ---
 
 <Layout title="Daniel Sintimbrean | Fullstack Web" description="">
   <main>
-    <SectionContainer>
-      <div
-        class="grid items-center gap-6 px-4 py-24 text-center md:px-6 lg:grid-cols-3 lg:justify-center lg:gap-10"
-      >
-        <div class="col-span-2 space-y-6 lg:order-last">
-          <div class="inline-block rounded-lg bg-background px-3 py-1 text-sm">
-            Introducción
-          </div>
-          <h1
-            class="md:text-5xl/lg:leading-tighter text-3xl font-bold tracking-tighter"
-          >
-            Hola, soy Daniel Sintimbrean 👋
-          </h1>
-          <p
-            class="max-w-[600px] text-pretty md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed"
-          >
-            Ingeniero de software, especializado en el desarrollo fullstack de
-            aplicaciones web.
-          </p>
-          <p class="mx-auto max-w-[600px] md:text-sm lg:text-lg xl:text-sm">
-            Originalmente un aprendiz de .NET; sin embargo, React y TypeScript
-            fueron los que realmente encendieron mi pasión por el desarrollo. <br
-            />
-            ¡Bienvendio a mi portafolio!
-          </p>
-        </div>
-        <Image
-          alt="Hero"
-          class="mx-auto aspect-square overflow-hidden rounded-xl object-cover object-center"
-          height="310"
-          src="/foto-daniel.webp"
-          width="550"
-        />
-      </div>
-    </SectionContainer>
-    <SectionContainer>
-      <div
-        class="container grid items-center gap-6 px-4 text-center md:px-6 lg:gap-10"
-      >
-        <div class="space-y-3">
-          <h2 class="text-3xl font-bold tracking-tighter md:text-4xl/tight">
-            Experiencia
-          </h2>
-        </div>
+    <SectionContainer> <Hero /> </SectionContainer>
+
+    <div class="space-y-20">
+      <SectionContainer>
+        <Experiencia />
+      </SectionContainer>
+
+      <SectionContainer>
         <div
-          class="mx-auto grid max-w-5xl items-start gap-6 lg:grid-cols-2 lg:gap-12"
+          class="container grid items-center gap-6 px-4 text-center md:px-6 lg:gap-10"
         >
-          <div class="grid gap-1">
-            <h3 class="text-lg font-bold">User Experience Design</h3>
-            <p class="text-sm">
-              I create intuitive and user-friendly interfaces that make it easy
-              for users to accomplish their goals.
+          <div class="space-y-3">
+            <h2 class="text-3xl font-bold tracking-tighter md:text-4xl/tight">
+              My Projects
+            </h2>
+            <p
+              class="mx-auto max-w-[600px] text-gray-500 dark:text-gray-400 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed"
+            >
+              Check out some of my recent projects.
             </p>
           </div>
-        </div>
-      </div>
-    </SectionContainer>
-    <SectionContainer>
-      <div
-        class="container grid items-center gap-6 px-4 text-center md:px-6 lg:gap-10"
-      >
-        <div class="space-y-3">
-          <h2 class="text-3xl font-bold tracking-tighter md:text-4xl/tight">
-            My Projects
-          </h2>
-          <p
-            class="mx-auto max-w-[600px] text-gray-500 dark:text-gray-400 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed"
+          <div
+            class="mx-auto grid max-w-5xl items-start gap-6 lg:grid-cols-3 lg:gap-12"
           >
-            Check out some of my recent projects.
-          </p>
+            <Card>
+              <CardContent className="p-4">
+                <img
+                  alt="Project"
+                  class="aspect-video overflow-hidden rounded-lg object-cover object-center"
+                  height="140"
+                  src="/placeholder.svg"
+                  width="250"
+                />
+              </CardContent>
+              <CardHeader className="p-4">
+                <CardTitle>Project One</CardTitle>
+                <CardDescription>
+                  Description of the project goes here. This project was built
+                  with love and hard work.
+                </CardDescription>
+              </CardHeader>
+            </Card>
+            <Card>
+              <CardContent className="p-4">
+                <img
+                  alt="Project"
+                  class="aspect-video overflow-hidden rounded-lg object-cover object-center"
+                  height="140"
+                  src="/placeholder.svg"
+                  width="250"
+                />
+              </CardContent>
+              <CardHeader className="p-4">
+                <CardTitle>Project Two</CardTitle>
+                <CardDescription>
+                  Description of the project goes here. This project was built
+                  with love and hard work.
+                </CardDescription>
+              </CardHeader>
+            </Card>
+            <Card>
+              <CardContent className="p-4">
+                <img
+                  alt="Project"
+                  class="aspect-video overflow-hidden rounded-lg object-cover object-center"
+                  height="140"
+                  src="/placeholder.svg"
+                  width="250"
+                />
+              </CardContent>
+              <CardHeader className="p-4">
+                <CardTitle>Project Three</CardTitle>
+                <CardDescription>
+                  Description of the project goes here. This project was built
+                  with love and hard work.
+                </CardDescription>
+              </CardHeader>
+            </Card>
+          </div>
         </div>
+      </SectionContainer>
+      <SectionContainer>
         <div
-          class="mx-auto grid max-w-5xl items-start gap-6 lg:grid-cols-3 lg:gap-12"
+          class="container grid items-center gap-6 px-4 text-center md:px-6 lg:gap-10"
         >
-          <Card>
-            <CardContent className="p-4">
-              <img
-                alt="Project"
-                class="aspect-video overflow-hidden rounded-lg object-cover object-center"
-                height="140"
-                src="/placeholder.svg"
-                width="250"
-              />
-            </CardContent>
-            <CardHeader className="p-4">
-              <CardTitle>Project One</CardTitle>
-              <CardDescription>
-                Description of the project goes here. This project was built
-                with love and hard work.
-              </CardDescription>
-            </CardHeader>
-          </Card>
-          <Card>
-            <CardContent className="p-4">
-              <img
-                alt="Project"
-                class="aspect-video overflow-hidden rounded-lg object-cover object-center"
-                height="140"
-                src="/placeholder.svg"
-                width="250"
-              />
-            </CardContent>
-            <CardHeader className="p-4">
-              <CardTitle>Project Two</CardTitle>
-              <CardDescription>
-                Description of the project goes here. This project was built
-                with love and hard work.
-              </CardDescription>
-            </CardHeader>
-          </Card>
-          <Card>
-            <CardContent className="p-4">
-              <img
-                alt="Project"
-                class="aspect-video overflow-hidden rounded-lg object-cover object-center"
-                height="140"
-                src="/placeholder.svg"
-                width="250"
-              />
-            </CardContent>
-            <CardHeader className="p-4">
-              <CardTitle>Project Three</CardTitle>
-              <CardDescription>
-                Description of the project goes here. This project was built
-                with love and hard work.
-              </CardDescription>
-            </CardHeader>
-          </Card>
-        </div>
-      </div>
-    </SectionContainer>
-    <SectionContainer>
-      <div
-        class="container grid items-center gap-6 px-4 text-center md:px-6 lg:gap-10"
-      >
-        <div class="space-y-3">
-          <h2 class="text-3xl font-bold tracking-tighter md:text-4xl/tight">
-            My Skills
-          </h2>
-          <p
-            class="mx-auto max-w-[600px] text-gray-500 dark:text-gray-400 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed"
+          <div class="space-y-3">
+            <h2 class="text-3xl font-bold tracking-tighter md:text-4xl/tight">
+              My Skills
+            </h2>
+            <p
+              class="mx-auto max-w-[600px] text-gray-500 dark:text-gray-400 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed"
+            >
+              I'm skilled in a variety of areas, including user experience
+              design, frontend development, and more.
+            </p>
+          </div>
+          <div
+            class="mx-auto grid max-w-5xl items-start gap-6 lg:grid-cols-2 lg:gap-12"
           >
-            I'm skilled in a variety of areas, including user experience design,
-            frontend development, and more.
-          </p>
-        </div>
-        <div
-          class="mx-auto grid max-w-5xl items-start gap-6 lg:grid-cols-2 lg:gap-12"
-        >
-          <div class="grid gap-1">
-            <h3 class="text-lg font-bold">User Experience Design</h3>
-            <p class="text-sm text-gray-500 dark:text-gray-400">
-              I create intuitive and user-friendly interfaces that make it easy
-              for users to accomplish their goals.
-            </p>
-          </div>
-          <div class="grid gap-1">
-            <h3 class="text-lg font-bold">Frontend Development</h3>
-            <p class="text-sm text-gray-500 dark:text-gray-400">
-              I build beautiful and responsive websites using HTML, CSS, and
-              JavaScript.
-            </p>
-          </div>
-          <div class="grid gap-1">
-            <h3 class="text-lg font-bold">User Experience Design</h3>
-            <p class="text-sm text-gray-500 dark:text-gray-400">
-              I create intuitive and user-friendly interfaces that make it easy
-              for users to accomplish their goals.
-            </p>
-          </div>
-          <div class="grid gap-1">
-            <h3 class="text-lg font-bold">Frontend Development</h3>
-            <p class="text-sm text-gray-500 dark:text-gray-400">
-              I build beautiful and responsive websites using HTML, CSS, and
-              JavaScript.
-            </p>
+            <div class="grid gap-1">
+              <h3 class="text-lg font-bold">User Experience Design</h3>
+              <p class="text-sm text-gray-500 dark:text-gray-400">
+                I create intuitive and user-friendly interfaces that make it
+                easy for users to accomplish their goals.
+              </p>
+            </div>
+            <div class="grid gap-1">
+              <h3 class="text-lg font-bold">Frontend Development</h3>
+              <p class="text-sm text-gray-500 dark:text-gray-400">
+                I build beautiful and responsive websites using HTML, CSS, and
+                JavaScript.
+              </p>
+            </div>
+            <div class="grid gap-1">
+              <h3 class="text-lg font-bold">User Experience Design</h3>
+              <p class="text-sm text-gray-500 dark:text-gray-400">
+                I create intuitive and user-friendly interfaces that make it
+                easy for users to accomplish their goals.
+              </p>
+            </div>
+            <div class="grid gap-1">
+              <h3 class="text-lg font-bold">Frontend Development</h3>
+              <p class="text-sm text-gray-500 dark:text-gray-400">
+                I build beautiful and responsive websites using HTML, CSS, and
+                JavaScript.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-    </SectionContainer>
+      </SectionContainer>
+    </div>
   </main>
 </Layout>
