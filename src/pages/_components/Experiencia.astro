@@ -1,8 +1,28 @@
-<div
-  class="container grid items-center gap-6 px-4 text-center md:px-6 lg:gap-10"
->
+---
+import ExperienceItem from "./ExperienceItem.astro";
+
+const EXPERIENCIE = [
+  {
+    date: "Actualmente...",
+    title: "Creador de Contenido",
+    company: "Twitch",
+    description:
+      "Divulgo sobre programación y desarrollo web en diferentes plataformas. Galardonado como mejor creador de contenido de habla no-inglesa en 2022 y mejor comunidad en 2023 por GitHub.",
+    link: "https://twitch.tv/midudev",
+  },
+  {
+    date: "Septiembre 2022",
+    title: "Principal Frontend Engineer",
+    company: "Adevinta Spain",
+    description:
+      "Responsable de la plataforma, componentes y utilidades para la creación y desarrollo de aplicaciones web. Mejora de un 30% en la entrega de software. Implantación de medidas de integración continua y despliegue con A/B testing en más de 15 equipos.",
+  },
+];
+---
+
+<!-- <div class="container grid items-center gap-6 px-4 md:px-6 lg:gap-10">
   <div class="space-y-3">
-    <h2 class="text-3xl font-bold tracking-tighter md:text-4xl/tight">
+    <h2 class="w-full text-3xl font-bold tracking-tighter md:text-4xl/tight">
       Experiencia
     </h2>
   </div>
@@ -17,4 +37,13 @@
       </p>
     </div>
   </div>
-</div>
+</div> -->
+<ol class="relative mt-16">
+  {
+    EXPERIENCIE.map((experiencie) => (
+      <li class="">
+        <ExperienceItem {...experiencie} />
+      </li>
+    ))
+  }
+</ol>
