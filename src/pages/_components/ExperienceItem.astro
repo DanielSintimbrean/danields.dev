@@ -18,7 +18,7 @@ const { title, company, description, link, date } = Astro.props;
   <div class="relative pb-12 md:col-span-2">
     <div class="sticky top-0">
       <span
-        class="absolute -left-[42px] cursor-default select-none rounded-full text-5xl text-yellow-400"
+        class="absolute -left-[42px] cursor-default select-none rounded-full text-5xl text-primary"
         >&bull;</span
       >
 
@@ -38,24 +38,26 @@ const { title, company, description, link, date } = Astro.props;
     {
       link && (
         <LinkInline href={link}>
-          Saber más{" "}
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="icon icon-tabler icon-tabler-chevron-right w-5"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            stroke-width="2"
-            stroke="currentColor"
-            fill="none"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <>
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path d="M9 6l6 6l-6 6" />
-            </>
-          </svg>
+          <div class="inline-flex select-none">
+            Saber más
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-chevron-right w-5"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <>
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M9 6l6 6l-6 6" />
+              </>
+            </svg>
+          </div>
         </LinkInline>
       )
     }

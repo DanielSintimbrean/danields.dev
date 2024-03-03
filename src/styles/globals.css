@@ -25,6 +25,8 @@ p {
 
 @layer base {
   :root {
+    --gradient: linear-gradient(to top left, #1e3c72, #1e3c72, #2a5298);
+
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
 
@@ -59,6 +61,9 @@ p {
   }
 
   .dark {
+    /* CSS: .bg-gradient { background: var(--gradient) } */
+    --gradient: linear-gradient(to top left, #1488cc, #2b32b2);
+
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
 
