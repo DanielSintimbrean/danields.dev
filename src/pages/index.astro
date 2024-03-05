@@ -4,15 +4,10 @@ import Layout from "@/layouts/Layout.astro";
 import "../styles/globals.css";
 
 import SectionContainer from "@/components/SectionContainer.astro";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
 import Experiencia from "./_components/Experiencia.astro";
 import Hero from "./_components/Hero.astro";
+import MyProjects from "./_components/MyProjects.astro";
+import { Briefcase } from "lucide-react";
 ---
 
 <Layout title="Daniel Sintimbrean | Fullstack Web" description="">
@@ -21,82 +16,23 @@ import Hero from "./_components/Hero.astro";
 
     <div class="space-y-20">
       <SectionContainer>
+      <h2
+        class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
+      >
+        <Briefcase className="size-8" />
+        Experiencia laboral
+      </h2>
         <Experiencia />
       </SectionContainer>
 
       <SectionContainer>
-        <div
-          class="container grid items-center gap-6 px-4 text-center md:px-6 lg:gap-10"
-        >
-          <div class="space-y-3">
-            <h2 class="text-3xl font-bold tracking-tighter md:text-4xl/tight">
-              My Projects
-            </h2>
-            <p
-              class="mx-auto max-w-[600px] text-gray-500 dark:text-gray-400 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed"
-            >
-              Check out some of my recent projects.
-            </p>
-          </div>
-          <div
-            class="mx-auto grid max-w-5xl items-start gap-6 lg:grid-cols-3 lg:gap-12"
-          >
-            <Card>
-              <CardContent className="p-4">
-                <img
-                  alt="Project"
-                  class="aspect-video overflow-hidden rounded-lg object-cover object-center"
-                  height="140"
-                  src="/placeholder.svg"
-                  width="250"
-                />
-              </CardContent>
-              <CardHeader className="p-4">
-                <CardTitle>Project One</CardTitle>
-                <CardDescription>
-                  Description of the project goes here. This project was built
-                  with love and hard work.
-                </CardDescription>
-              </CardHeader>
-            </Card>
-            <Card>
-              <CardContent className="p-4">
-                <img
-                  alt="Project"
-                  class="aspect-video overflow-hidden rounded-lg object-cover object-center"
-                  height="140"
-                  src="/placeholder.svg"
-                  width="250"
-                />
-              </CardContent>
-              <CardHeader className="p-4">
-                <CardTitle>Project Two</CardTitle>
-                <CardDescription>
-                  Description of the project goes here. This project was built
-                  with love and hard work.
-                </CardDescription>
-              </CardHeader>
-            </Card>
-            <Card>
-              <CardContent className="p-4">
-                <img
-                  alt="Project"
-                  class="aspect-video overflow-hidden rounded-lg object-cover object-center"
-                  height="140"
-                  src="/placeholder.svg"
-                  width="250"
-                />
-              </CardContent>
-              <CardHeader className="p-4">
-                <CardTitle>Project Three</CardTitle>
-                <CardDescription>
-                  Description of the project goes here. This project was built
-                  with love and hard work.
-                </CardDescription>
-              </CardHeader>
-            </Card>
-          </div>
-        </div>
+      <h2
+        class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-foreground"
+      >
+        <Briefcase className="size-8" />
+        Mis proyectos 
+      </h2>
+        <MyProjects />
       </SectionContainer>
       <SectionContainer>
         <div
