@@ -7,21 +7,21 @@ import { Image } from "astro:assets";
 >
   <div class="col-span-2 space-y-6 lg:order-last">
     <h1
-      class="md:text-5xl/lg:leading-tighter text-3xl font-bold tracking-tighter"
+      class="md:text-5xl/lg:leading-tighter text-3xl font-semibold tracking-tighter"
     >
-      Hola, soy Daniel Sintimbrean 👋
+      Hola, soy <b class="font-black">Daniel Sintimbrean 👋</b>
     </h1>
-    <p
-      class="max-w-[600px] text-pretty md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed"
-    >
+    <p class="max-w-[600px] text-pretty text-lg md:text-xl/relaxed">
       Ingeniero de software, especializado en <strong class="text-nowrap"
         >desarrollo fullstack</strong
       > de aplicaciones web.
     </p>
-    <p class="mx-auto max-w-[600px] md:text-sm lg:text-lg xl:text-sm">
-      Originalmente un aprendiz de .NET; sin embargo, React y TypeScript fueron
-      los que realmente encendieron mi pasión por el desarrollo. <br />
-      ¡Bienvendio a mi portafolio!
+    <p
+      class="lg:text-sm font-body mx-auto max-w-[600px] text-gray-600 dark:text-gray-300 text-xs"
+    >
+      Originalmente un aprendiz de .NET; sin embargo, <span
+        class="text-nowrap font-black">React y TypeScript</span
+      > fueron los que realmente encendieron mi pasión por el desarrollo. <br />
     </p>
   </div>
   <Image

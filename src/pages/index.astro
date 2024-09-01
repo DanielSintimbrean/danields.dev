@@ -3,9 +3,28 @@ import Layout from "@/layouts/Layout.astro";
 
 import "../styles/globals.css";
 
-import { Briefcase } from "lucide-react";
+import {
+  Briefcase,
+  CloudIcon,
+  CodepenIcon,
+  DatabaseIcon,
+  DockIcon,
+  EclipseIcon,
+  FolderGit2,
+  GitGraphIcon,
+  Handshake,
+  HashIcon,
+  ListChecks,
+  PiIcon,
+  SlackIcon,
+  TriangleIcon,
+  ViewIcon,
+} from "lucide-react";
 
 import SectionContainer from "@/components/SectionContainer.astro";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 import Experiencia from "./_components/Experiencia.astro";
 import Hero from "./_components/Hero.astro";
 import MyProjects from "./_components/MyProjects.astro";
@@ -16,71 +35,201 @@ import MyProjects from "./_components/MyProjects.astro";
     <SectionContainer> <Hero /> </SectionContainer>
 
     <div class="space-y-20">
-      <SectionContainer>
+      <SectionContainer id="experiencia">
         <h2
           class="mb-6 flex items-center gap-x-3 text-3xl font-semibold text-black/80 dark:text-white"
         >
-          <Briefcase className="size-8" />
+          <Briefcase className="size-8 text-foreground/70"  />
           Experiencia laboral
         </h2>
         <Experiencia />
       </SectionContainer>
 
-      <SectionContainer>
+      <SectionContainer id="proyectos">
         <h2
           class="mb-6 flex items-center gap-x-3 text-3xl font-semibold text-foreground"
         >
-          <Briefcase className="size-8" />
+          <FolderGit2 className="size-8 text-foreground/70" />
           Mis proyectos
         </h2>
         <MyProjects />
       </SectionContainer>
-      <SectionContainer>
-        <div
-          class="container grid items-center gap-6 px-4 text-center md:px-6 lg:gap-10"
+      <SectionContainer id="habilidades">
+        <h2
+          class="mb-6 flex items-center gap-x-3 text-3xl font-semibold text-foreground"
         >
-          <div class="space-y-3">
-            <h2 class="text-3xl font-bold tracking-tighter md:text-4xl/tight">
-              My Skills
-            </h2>
-            <p
-              class="mx-auto max-w-[600px] text-gray-500 dark:text-gray-400 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed"
-            >
-              I'm skilled in a variety of areas, including user experience
-              design, frontend development, and more.
+          <ListChecks className="size-8 text-foreground/70" />
+          Mis habilidades
+        </h2>
+        <p
+          class="font-body mb-6 flex items-center gap-x-3 text-left text-lg text-foreground text-gray-600 dark:text-gray-300"
+        >
+          Tengo experiencia en una amplia gama de tecnologías y frameworks de
+          desarrollo web.
+        </p>
+        <div
+          class="flex flex-col items-center justify-center space-y-4 text-center"
+        >
+          <div class="space-y-2"></div>
+          <div
+            class="font-body mx-auto grid max-w-5xl items-start gap-6 pb-12 lg:grid-cols-3 lg:gap-12"
+          >
+            <div class="flex flex-col justify-center space-y-4">
+              <h3 class="w-full text-left text-2xl font-bold">Front-end</h3>
+              <ul class="grid gap-2">
+                <li>
+                  <div class="flex items-center gap-2">
+                    <CodepenIcon className="h-6 w-6" />
+                    <span>React</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="flex items-center gap-2">
+                    <ViewIcon className="h-6 w-6" />
+                    <span>Next.js</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="flex items-center gap-2">
+                    <TriangleIcon className="h-6 w-6" />
+                    <span>Tailwindcss</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="flex items-center gap-2">
+                    <HashIcon className="h-6 w-6" />
+                    <span>HTML5</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="flex items-center gap-2">
+                    <CodepenIcon className="h-6 w-6" />
+                    <span>CSS3</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="flex items-center gap-2">
+                    <EclipseIcon className="h-6 w-6" />
+                    <span>JavaScript</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="flex flex-col justify-start space-y-4">
+              <h3 class="text-left text-2xl font-bold">Back-end</h3>
+              <ul class="grid gap-2">
+                <li>
+                  <div class="flex items-center gap-2">
+                    <CodepenIcon className="h-6 w-6" />
+                    <span>Node.js</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="flex items-center gap-2">
+                    <PiIcon className="h-6 w-6" />
+                    <span>Nest.js</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="flex items-center gap-2">
+                    <PiIcon className="h-6 w-6" />
+                    <span>Prisma ORM</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="flex items-center gap-2">
+                    <DatabaseIcon className="h-6 w-6" />
+                    <span>SQL/NoSQL Databases</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="flex items-center gap-2">
+                    <PiIcon className="h-6 w-6" />
+                    <span>RESTful APIs</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="flex items-center gap-2">
+                    <DockIcon className="h-6 w-6" />
+                    <span>Docker</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="flex flex-col items-start justify-start space-y-4">
+              <h3 class="text-2xl font-bold">Otras</h3>
+              <ul class="grid gap-2">
+                <li>
+                  <div class="flex items-center gap-2">
+                    <GitGraphIcon className="h-6 w-6" />
+                    <span>Git</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="flex items-center gap-2">
+                    <CloudIcon className="h-6 w-6" />
+                    <span>AWS</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="flex items-center gap-2">
+                    <CloudIcon className="h-6 w-6" />
+                    <span>Linux</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="flex items-center gap-2">
+                    <SlackIcon className="h-6 w-6" />
+                    <span>Agile Methodologies</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </SectionContainer>
+      <SectionContainer>
+        <h2
+          class="mb-6 flex items-center gap-x-3 text-3xl font-semibold text-foreground"
+        >
+          <Handshake className="size-8 text-foreground/70" />
+          ¿Hablamos?
+        </h2>
+        <div
+          class="mx-auto flex w-full flex-col justify-between gap-6 md:flex-row"
+        >
+          <div>
+            <h3 class="mb-2 text-xl font-semibold">Email</h3>
+            <p>
+              <a
+                href="mailto:contacto@danields.dev"
+                class="font-body text-blue-500 hover:underline"
+              >
+                contacto@danields.dev
+              </a>
             </p>
           </div>
-          <div
-            class="mx-auto grid max-w-5xl items-start gap-6 lg:grid-cols-2 lg:gap-12"
-          >
-            <div class="grid gap-1">
-              <h3 class="text-lg font-bold">User Experience Design</h3>
-              <p class="text-sm text-gray-500 dark:text-gray-400">
-                I create intuitive and user-friendly interfaces that make it
-                easy for users to accomplish their goals.
-              </p>
-            </div>
-            <div class="grid gap-1">
-              <h3 class="text-lg font-bold">Frontend Development</h3>
-              <p class="text-sm text-gray-500 dark:text-gray-400">
-                I build beautiful and responsive websites using HTML, CSS, and
-                JavaScript.
-              </p>
-            </div>
-            <div class="grid gap-1">
-              <h3 class="text-lg font-bold">User Experience Design</h3>
-              <p class="text-sm text-gray-500 dark:text-gray-400">
-                I create intuitive and user-friendly interfaces that make it
-                easy for users to accomplish their goals.
-              </p>
-            </div>
-            <div class="grid gap-1">
-              <h3 class="text-lg font-bold">Frontend Development</h3>
-              <p class="text-sm text-gray-500 dark:text-gray-400">
-                I build beautiful and responsive websites using HTML, CSS, and
-                JavaScript.
-              </p>
-            </div>
+          <div class="max-w-lg flex-grow space-y-4">
+            <h3 class="mt-2 text-xl font-semibold">Contacto</h3>
+            <form class="flex flex-col gap-4">
+              <Input
+                type="text"
+                placeholder="Nombre"
+                className="max-w-lg flex-1"
+              />
+              <Input
+                type="email"
+                placeholder="Email"
+                className="max-w-lg flex-1"
+              />
+              <Textarea
+                placeholder="Escribe tu mensaje aquí..."
+                className="max-w-lg flex-1"
+              />
+              <div class="flex flex-row-reverse">
+                <Button type="submit">Enviar</Button>
+              </div>
+            </form>
           </div>
         </div>
       </SectionContainer>

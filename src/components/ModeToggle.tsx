@@ -30,10 +30,10 @@ export function ModeToggle() {
   return (
     <DropdownMenu modal={false}>
       <DropdownMenuTrigger asChild>
-        <Button variant="outline" size="icon">
+        <Button variant="outline" className='bg-transparent border-0' size="icon">
           <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:hidden dark:-rotate-90 dark:scale-0" />
           <Moon className="hidden h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:block dark:rotate-0 dark:scale-100" />
-          <span className="sr-only text-foreground">Toggle theme</span>
+          <span className="sr-only text-foreground">Cambiar tema</span>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
