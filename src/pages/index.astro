@@ -3,11 +3,12 @@ import Layout from "@/layouts/Layout.astro";
 
 import "../styles/globals.css";
 
+import { Briefcase } from "lucide-react";
+
 import SectionContainer from "@/components/SectionContainer.astro";
 import Experiencia from "./_components/Experiencia.astro";
 import Hero from "./_components/Hero.astro";
 import MyProjects from "./_components/MyProjects.astro";
-import { Briefcase } from "lucide-react";
 ---
 
 <Layout title="Daniel Sintimbrean | Fullstack Web" description="">
@@ -16,22 +17,22 @@ import { Briefcase } from "lucide-react";
 
     <div class="space-y-20">
       <SectionContainer>
-      <h2
-        class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
-      >
-        <Briefcase className="size-8" />
-        Experiencia laboral
-      </h2>
+        <h2
+          class="mb-6 flex items-center gap-x-3 text-3xl font-semibold text-black/80 dark:text-white"
+        >
+          <Briefcase className="size-8" />
+          Experiencia laboral
+        </h2>
         <Experiencia />
       </SectionContainer>
 
       <SectionContainer>
-      <h2
-        class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-foreground"
-      >
-        <Briefcase className="size-8" />
-        Mis proyectos 
-      </h2>
+        <h2
+          class="mb-6 flex items-center gap-x-3 text-3xl font-semibold text-foreground"
+        >
+          <Briefcase className="size-8" />
+          Mis proyectos
+        </h2>
         <MyProjects />
       </SectionContainer>
       <SectionContainer>
