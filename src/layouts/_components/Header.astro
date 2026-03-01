@@ -80,7 +80,27 @@ const navItems = [
 
   @keyframes nav-shadown {
     to {
-      @apply bg-white/50 shadow-lg ring-1 ring-white/10 backdrop-blur dark:bg-gray-800/90;
+      background-color: rgb(255 255 255 / 0.5);
+      box-shadow:
+        0 0 0 1px rgb(255 255 255 / 0.1),
+        0 10px 15px -3px rgb(0 0 0 / 0.1),
+        0 4px 6px -4px rgb(0 0 0 / 0.1);
+      backdrop-filter: blur(8px);
+    }
+  }
+
+  :where(.dark, .dark *) nav {
+    animation-name: nav-shadown-dark;
+  }
+
+  @keyframes nav-shadown-dark {
+    to {
+      background-color: rgb(31 41 55 / 0.9);
+      box-shadow:
+        0 0 0 1px rgb(255 255 255 / 0.1),
+        0 10px 15px -3px rgb(0 0 0 / 0.1),
+        0 4px 6px -4px rgb(0 0 0 / 0.1);
+      backdrop-filter: blur(8px);
     }
   }
 </style>
